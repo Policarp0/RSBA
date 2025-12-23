@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="RSA.Application/RSA.Application.csproj" Id="d364012a-b644-44aa-87ba-329042ddcc71" />
+  <Project Path="RSA.Domain/RSA.Domain.csproj" Id="26b22bcf-21f6-4897-86c1-1a14b62634cd" />
+  <Project Path="RSA.Infrastructure/RSA.Infrastructure.csproj" Id="5f395f5e-6bbc-4c62-a28a-350fc574ba52" />
+  <Project Path="RSA.Presentation/RSA.Presentation.csproj" Id="831d4213-d555-4fc0-b27a-caf71fb5895c">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
