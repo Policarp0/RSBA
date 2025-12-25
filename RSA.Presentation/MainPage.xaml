@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RSA.Presentation.MainPage"
-             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls">
-
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="RSA.Presentation.MainPage">
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <zxing:CameraBarcodeReaderView
-                x:Name="barcodeReader"
-                BarcodesDetected="barcodeReader_BarcodesDetected"/>
+
+        <VerticalStackLayout>
+            <Label
+                Text="OI"/>
+
         </VerticalStackLayout>
     </ScrollView>
 
