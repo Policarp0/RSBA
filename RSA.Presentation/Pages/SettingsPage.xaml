@@ -1,12 +1,59 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="RSA.Presentation.Pages.SettingsPage"
              Title="Configurações">
-    <VerticalStackLayout>
-        <Label 
-            Text="Essa é a página CONFIGURAÇÕES!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <!-- Cabeçalho -->
+            <Label Text="Configurações"
+                   FontAttributes="Bold"
+                   FontSize="26" />
+
+            <!-- Identificação -->
+            <Border Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Identificação" FontAttributes="Bold" />
+                    <Label Text="Identificar usuário do aplicativo" VerticalOptions="Center" LineBreakMode="WordWrap"/>
+                    <Entry Placeholder="Digite a seu nome"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Conexão Servidor -->
+            <Border Padding="15,15,1,15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Conexão com servidor" FontAttributes="Bold" />
+                    <Label Text="Definir uma IP para se conectar com o servidor" VerticalOptions="Center" LineBreakMode="WordWrap"/>
+                        <Switch />
+                    <Entry Placeholder="Digite a IP do servidor">
+                        <Entry.Behaviors>
+                            <toolkit:MaskedBehavior Mask="000.000.000.000" UnmaskedCharacter="0"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- AParência -->
+
+            <!-- Notificações -->
+            <Border Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Notificações" FontAttributes="Bold" />
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Receber Notificações" VerticalOptions="Center" />
+                        <Switch HorizontalOptions="End"/>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Botão salvar -->
+            <Button Text="Salvar Configurações"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    CornerRadius="10"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

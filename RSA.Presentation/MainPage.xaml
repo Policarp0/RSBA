@@ -5,10 +5,46 @@
              xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
              x:Class="RSA.Presentation.MainPage">
     <ScrollView>
+        <VerticalStackLayout 
+            Margin="20" 
+            Spacing="25">
 
-        <VerticalStackLayout>
-            <Label
-                Text="OI"/>
+            <Border 
+                Padding="15" 
+                MinimumHeightRequest="150"
+                StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout 
+                    Spacing="10">
+                    <Label 
+                        Text="Nenhum servidor encontrado" 
+                        FontAttributes="Bold" 
+                        HorizontalOptions="Center"/>
+                    <Button
+                        BackgroundColor="DimGray"
+                        Clicked="Button_Clicked"
+                        MinimumHeightRequest="80"
+                        IsVisible="True"/>
+                    <VerticalStackLayout>
+                        
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+            
+            <Border 
+                Padding="15" 
+                MinimumHeightRequest="150"
+                StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout 
+                   Spacing="10">
+                    <Label 
+                        Text="Histórico" 
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"/>
+                    <VerticalStackLayout>
+                        
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
 
         </VerticalStackLayout>
     </ScrollView>
