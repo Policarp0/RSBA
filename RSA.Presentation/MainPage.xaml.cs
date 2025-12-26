@@ -1,4 +1,6 @@
-﻿using ZXing.Net.Maui;
+﻿using Microsoft.Extensions.Hosting;
+using Zeroconf;
+using ZXing.Net.Maui;
 namespace RSA.Presentation
 {
     public partial class MainPage : ContentPage
@@ -6,6 +8,11 @@ namespace RSA.Presentation
         public MainPage()
         {
             InitializeComponent();
+        }
+        
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+           
         }
     }
 }
