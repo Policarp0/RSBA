@@ -1,5 +1,7 @@
-﻿using CommunityToolkit.Maui;
+﻿using BarcodeScanning;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+
 
 namespace RSA.Presentation
 {
@@ -10,7 +12,8 @@ namespace RSA.Presentation
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .UseMauiCommunityToolkit()  
+                .UseMauiCommunityToolkit()
+                .UseBarcodeScanning()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
